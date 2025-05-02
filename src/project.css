@@ -1,0 +1,643 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    
+  }
+  
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(226, 198, 198);
+    padding: 20px;
+    font-size: 23px;
+   position: relative;
+   top: 0;
+   right: 0;
+   z-index: 1000;
+   width: 100vw;
+}
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      padding: 15px 10px;
+      width: 100vw; /* ⬅️ مهم جدًا: يملى عرض الشاشة بالكامل */
+      height: auto;
+      box-sizing: border-box;
+    }
+  
+    .navbar-left,
+    .navbar-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      width: 100%; /* عشان ياخدوا نفس عرض الـ navbar */
+      text-align: center;
+    }
+  
+    .navbar-links a,
+    .logo a {
+      font-size: 18px;
+      display: block;
+      width: 100%;
+    }
+  
+    .hamburger {
+      font-size: 24px;
+    }
+  }
+  
+  
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+.logo a {
+    text-decoration: none;
+    color: rgb(241, 241, 193);
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+
+.logo a:hover {
+    color: rgb(114, 13, 114);
+}
+
+.navbar-links {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: rgb(247, 247, 203);
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.navbar-links a:hover {
+    color: rgb(114, 13, 114);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.home h1 {
+    margin-bottom: 20px;
+    color: rgb(114, 13, 114);
+}
+
+.home p {
+    margin-bottom: 20px;
+    color: rgb(114, 13, 114);
+    font-size: 18px;
+}
+
+.home a {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.home a:hover {
+    transform: scale(1.5);
+}
+
+.about h1 {
+    text-align: center;
+    color: rgb(114, 13, 114);
+    padding: 20px;
+}
+.about p {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    color: rgb(114, 13, 114);
+    text-align: right;
+    padding-top: 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px; 
+    margin-top: 50px;
+}
+
+.team-member img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+  transition: 0.3s;
+}
+.team-member img:hover{
+    transform:  scale(1.5);
+}
+
+.team-member p {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(114, 13, 114);
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+li {
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .about {
+      text-align: right;            /* تأكيد محاذاة النص */
+      width: 50%;                   /* نص العرض عشان ما يتغطاش بالسايد بار */
+      margin-left: auto;            /* يدزّه على اليمين */
+      padding: 10px;                /* شوية فراغ */
+    }
+  
+    .about h1, .about h2, .about p, .about li {
+      text-align: right;
+    }
+  
+    .team-members {
+      flex-direction: column;       /* الصور تحت بعض */
+      gap: 20px;
+      align-items: flex-end;        /* عشان كل الصور تيجي على اليمين */
+    }
+  
+    .team-member p {
+      text-align: right;
+    }
+  
+    .team-member img {
+      width: 100%;                  /* تخلي الصورة تملى العرض المحدود الجديد */
+      max-width: 300px;             /* بس ما تكبرش أكتر من كده */
+    }
+  }
+  
+.services{
+    text-align: right;
+    
+}
+
+
+@media (max-width: 768px){
+    .services{
+        max-width: 400px;
+        margin-left: 200px;
+        padding: 10px;
+    }
+    .services h1{
+        font-size: 18px;
+    }
+    
+}
+ .services h1{
+padding: 20px;
+color: rgb(114, 13, 114);
+ }
+.services h3{
+    padding: 20px;
+}
+.services p{
+    padding: 5px;
+
+}
+.services button{
+    padding: 5px;
+    border-radius: 20%;
+    background-color: rgb(226, 198, 198);
+    transition: 0.3s;
+    cursor: pointer;
+}
+ .services button:hover{
+    background-color: rgb(114, 13, 114);
+color: white;
+  }
+  .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+
+
+  }
+  @media (max-width: 768px){
+    .contact{
+        width: 100%;
+        max-width: 300px;
+        margin-left:auto;
+    }
+    .contact-info {
+        max-width: 200px;
+        width: 50%;
+        padding: 5px;
+        border: 1px solid beige;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        margin-left: 150px;
+    
+      }
+  }
+  @media (max-width: 320px){
+    .contact{
+        width: 100%;
+        max-width: 300px;
+        
+  }
+  .contact-info {
+    max-width: 200px;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid beige;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    margin-left: 150px;
+
+  }
+
+  }
+  .contact-info h1{
+    text-align: center;
+    color: rgb(114, 13, 114);
+  }
+  .contact-item{
+    margin-top: 20px;
+  }
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+    margin-top: 50px;
+}
+.login-container h1{
+    color: rgb(114, 13, 114);
+}
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border: 1px solid beige;
+    background-color: white; 
+    border-radius: 8px;
+}
+
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    font-size: 14px;
+    color: rgb(114, 13, 114);
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+
+}
+
+
+
+.login-form .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(114, 13, 114);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-form .login-button:hover {
+    background-color: rgb(100, 0, 100);
+}
+
+
+  .parent-form{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    translate: -50% -50%;
+    background-color: rgb(226, 198, 198);
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    max-height: 300px;
+  }
+  @media (max-width: 768px){
+    .parent-form{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        max-width: 300px;
+        height: 100%;
+        max-height: 200px;
+        
+
+    }
+  }
+  .form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+.form input{
+    width: 80%;
+    height: 30px;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+.form input:hover{
+    padding: 10px;
+}
+.form button{
+    width: 80px;
+    height: 30px;
+    font-size: 18px;
+    background-color:rgb(100, 0, 100) ;
+    color: white;
+    transition: 0.3s;
+}
+.form button:hover{
+    background-color: rgb(226, 198, 198);
+    color: black;
+}
+.hamburger{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+.side {
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(226, 198, 198);
+    position: fixed;
+    top: 0;
+    left: 0;
+z-index: 900;
+}
+.side-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    direction: rtl;
+    padding: 20px;
+    margin-top: 50px;
+}
+.side-content a{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+.side-content a:hover{
+    color:rgb(100, 0, 100) ;
+}
+@media(max-width:320px){
+    .side{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100vh;
+         width: 150px;
+        font-size: 16px;
+      
+    
+    }
+    .side-content{
+    margin-top: 0;
+    margin-bottom: 50px;
+    }
+  
+    
+}
+@media(max-width :768px){
+    .side{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100vh;
+        width: 150px;
+        font-size: 16px;
+       
+    }
+    .side-content{
+    margin-top: 0;
+    margin-bottom: 50px;
+    }
+  
+  
+}
+.welcom , .nowelcom{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 30px;
+    
+}
+.welcom div{
+    margin-top: 50px;
+}
+.welcom h3{
+    margin-top: 20px;
+}
+@media(max-width:320px){
+    .nowelcom{
+        text-align: right;
+        margin-left: 100px;
+        font-size: 10px;
+    }
+}
+@media(max-width:768px){
+    .nowelcom{
+        text-align: right;
+        margin-left: 100px;
+        font-size: 10px;
+    }
+}
+.setting-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.setting-item{
+    margin-top: 20px;
+}
+.setting-page h1{
+    margin: 30px auto;
+    color: rgb(100, 0, 100);
+}
+.setting-item label{
+    color:rgb(100, 0, 100) ;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.setting-item input{
+    height: 20px;
+    padding: 15px;
+    margin-right: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+.setting-item select{
+    margin-right: 10px;
+    outline: none;
+    padding: 3px;
+    border-radius: 5px;
+}
+.setting-item button{
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 5px;
+    background-color:rgb(226, 198, 198) ;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.setting-item button:hover{
+    background-color: transparent;
+    color:rgb(100, 0, 100) ;
+}
+
+@media(max-width:320px){
+    .setting-page{
+        margin: 0;
+        max-width: 70px;
+        margin-left: 200px;
+    }
+    .setting-item label{
+        font-size: 18px;
+    }
+    .setting-item input{
+        width: 150px;
+        padding: 8px;
+    }
+}
+
+@media(max-width:768px){
+    .setting-page{
+        max-width: 300px;
+        margin-left: 50%;
+    
+    }
+    .setting-item label{
+        font-size: 18px;
+    }
+    .setting-item input{
+        width: 200px;
+        padding: 10px;
+    }
+}
+.side-content button{
+    margin-top: 25px;
+    padding: 5px 8px;
+    color:  white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 55px;
+    transition: 0.3s;
+
+}
+.side-content button:hover{
+    color:rgb(100, 0, 100) ;
+}
+.form h2{
+    color:rgb(100, 0, 100) ;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    direction: ltr;
+}
+.modal input{
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+transition: 0.3s;
+margin-top: 5px;
+
+}
+.modal input:hover{
+    padding: 20px;
+}
+.okbuttons button{
+    width: 100px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 20px;
+}

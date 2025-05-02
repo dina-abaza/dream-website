@@ -1,0 +1,12 @@
+{
+    "settings": "Settings",
+    "change_email": "Change Email",
+    "change_password": "Change Password",
+    "email_placeholder": "Enter your email",
+    "password_placeholder": "Enter new password",
+    "language": "Language",
+    "save_changes": "Save Changes",
+    "arabic": "Arabic",
+    "english": "English"
+  }
+  
